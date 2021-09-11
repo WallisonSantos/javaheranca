@@ -19,25 +19,24 @@ public abstract class Conta {
   public abstract void deposita(double valor);
 
   // ? Método de sacar padrão, que foi alterado na classe filha Conta Corrente !
-  public boolean saca(double valor) {
-    if (this.saldo >= valor) {
-      this.saldo -= valor;
-      return true;
-    } else {
-      return false;
+  public void saca(double valor) {
+
+    if (this.saldo < valor) {
+
+      throw new SaldoException("Saldo: " + this.saldo + ", valor: " + valor);
+
     }
+
+    this.saldo -= valor;
   }
 
   // ? Definindo que o tipo da variavel será o objeto Conta da classe mãe,
   // ? Assim qualquer classe filha poderá ser atribuida neste método transfere.
   // ? este método irá funcionar para qualquer conta, poupança, Corrente...
-  public boolean transfere(double valor, Conta destino) {
-    if (this.saca(valor)) {
-      destino.deposita(valor); // ? ! Irá chamar o método de depositar
-      return true;
-    } else {
-      return false;
-    }
+
+  public void transfere(double valor, Conta destino) {
+    this.saca(valor);
+    destino.deposita(valor);
   }
 
   public double getSaldo() {
