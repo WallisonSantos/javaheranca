@@ -45,3 +45,27 @@
 
 -- A herança é limitada ao polimorfismo, enquanto o uso de interfaces com composição possibilita polimorfismo E reutilização de código.
 - Errado pois Herança possibilita sim polimorfismo E reutilização. Com interfaces temos uma alternativa ao polimorfismo, com a composição temos uma alternativa a reutilização de código.
+
+### De que maneira as exceptions podem ajudar a melhorar o código de seu programa?
+
+a - Exceções tem um nome e, caso esse nome seja expressivo, documenta o problema que está ocorrendo.
+
+b - Exceções podem ter uma mensagem, ou seja, o problema e o estado das variáveis podem ser descritos na mensagem.
+
+c - Exceções mudam o fluxo de execução, ou seja, evitam que o problema siga o fluxo "normal" quando algo excepcional acontece.
+
+d - Exceções podem ser tratadas, ou seja, podemos voltar para a execução "normal" caso o "problema" esteja resolvido.
+
+## Quais opções estão corretas?
+## Todas as opções representam uma forma de melhorar o código, principalmente a expressividade.
+
+// --
+###  Vimos agora que em um arquivo de classe ou interface existe a declaração do package, a declaração do import e a definição da classe.
+
+## a) Só pode ter uma declaração package por arquivo
+
+## b) A declaração do import é opcional
+
+## c) É possível repetir a declaração import para importações de packages diferentes
+
+## d) A definição da classe sempre deve vir por último (após package e import)

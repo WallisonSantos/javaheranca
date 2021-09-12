@@ -1,3 +1,5 @@
+package br.com.bytebank.banco.model;
+
 public class ContaCorrente extends Conta implements Tributavel {
 
   // !Método Construtor herdado da classe mãe.
@@ -26,7 +28,7 @@ public class ContaCorrente extends Conta implements Tributavel {
   // ?? É usada para sobrescrever o método da classe mãe, indicando que o método
   // original foi alterado.
   @Override
-  public void saca(double valor) {
+  public void saca(double valor) throws SaldoException {
     System.out
         .println("Estou Nascendo em ContaCorrente, método Saca obtido a partir da Super Class com método abstrato");
     double valorSacar = valor + 0.2;

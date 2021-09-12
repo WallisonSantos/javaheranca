@@ -1,3 +1,5 @@
+package br.com.bytebank.banco.model;
+
 public class ContaPoupanca extends Conta {
 
   // !Método Construtor herdado da classe mãe.

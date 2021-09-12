@@ -1,3 +1,5 @@
+package br.com.bytebank.banco.model;
+
 public abstract class Conta {
 
   protected double saldo;
@@ -19,7 +21,7 @@ public abstract class Conta {
   public abstract void deposita(double valor);
 
   // ? Método de sacar padrão, que foi alterado na classe filha Conta Corrente !
-  public void saca(double valor) {
+  public void saca(double valor) throws SaldoException {
 
     if (this.saldo < valor) {
 
@@ -34,7 +36,7 @@ public abstract class Conta {
   // ? Assim qualquer classe filha poderá ser atribuida neste método transfere.
   // ? este método irá funcionar para qualquer conta, poupança, Corrente...
 
-  public void transfere(double valor, Conta destino) {
+  public void transfere(double valor, Conta destino) throws SaldoException {
     this.saca(valor);
     destino.deposita(valor);
   }
