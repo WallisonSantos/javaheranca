@@ -288,3 +288,14 @@ Se você acha que o Maven pode ajudar seu projeto, você pode encontrar mais inf
 Sabemos que um código produzido por um desenvolvedor Java pode ser utilizado por outros desenvolvedores. Nesse sentido, documentar o código e facilitar seu uso por outros desenvolvedores é uma boa prática a ser seguida.
 
 Sobre a geração de documentação, podemos usar o Javadoc, já para distribuição podemos empacotar a aplicação em um jar. Vamos começar pelo Javadoc.
+
+# Sobre java.lang
+
+-   O que é correto afirmar sobre o pacote java.lang? Alternativa correta
+    Não precisa do import, é automaticamente importado. Correto, não é preciso colocar explicitamente o import java.lang.\*
+    As classes String e System vem desse pacote.
+
+# Exceções do java.lang
+
+-   Quando falamos sobre exceções já vimos várias classes como Exception, RuntimeException, NullPointerException ou ArithmeticException.
+    Todas essas classes vem do pacote java.lang e por isso não era preciso importá-las.

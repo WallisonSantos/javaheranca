@@ -8,14 +8,10 @@ public class Teste {
 
     // FQN (Full Qualified Name) é nome completo da classe, composto pelo
     // nome do pacote e o nome da classe. FQN = Nome Pacote + Nome Simples da Classe
-    ContaCorrente cc = new ContaCorrente(123, 321);
-    Seguro seg = new Seguro();
-    Calculador calc = new Calculador();
 
-    cc.deposita(100);
-    cc.saca(140);
+    String nome = "Wallison"; // objeto literal
+    // String nome = new String("Wallison");
 
-    calc.Registra(cc);
-    calc.Registra(seg);
+    System.out.println(nome.getBytes());
   }
 }
