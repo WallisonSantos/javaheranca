@@ -49,23 +49,43 @@
 ### De que maneira as exceptions podem ajudar a melhorar o código de seu programa?
 
 a - Exceções tem um nome e, caso esse nome seja expressivo, documenta o problema que está ocorrendo.
-
 b - Exceções podem ter uma mensagem, ou seja, o problema e o estado das variáveis podem ser descritos na mensagem.
-
 c - Exceções mudam o fluxo de execução, ou seja, evitam que o problema siga o fluxo "normal" quando algo excepcional acontece.
-
 d - Exceções podem ser tratadas, ou seja, podemos voltar para a execução "normal" caso o "problema" esteja resolvido.
+-- Todas as opções representam uma forma de melhorar o código, principalmente a expressividade.
 
-## Quais opções estão corretas?
-## Todas as opções representam uma forma de melhorar o código, principalmente a expressividade.
-
-// --
 ###  Vimos agora que em um arquivo de classe ou interface existe a declaração do package, a declaração do import e a definição da classe.
 
-## a) Só pode ter uma declaração package por arquivo
+a) Só pode ter uma declaração package por arquivo
+b) A declaração do import é opcional
+c) É possível repetir a declaração import para importações de packages diferentes
+d) A definição da classe sempre deve vir por último (após package e import)
 
-## b) A declaração do import é opcional
+# No desenvolvimento em Java, organizamos nossas classes em pacotes. Sobre esse tema é correto afirmar que:
 
-## c) É possível repetir a declaração import para importações de packages diferentes
+-- Por organização e pela convenção adotada, precisamos seguir o domínio da empresa. Ou seja, se a empresa tem como domínio alura.com.br, os pacotes devem ser subpacotes de br.com.alura. Correto, mas existem exceções (poucas).
 
-## d) A definição da classe sempre deve vir por último (após package e import)
+-- Quando um projeto utiliza pacotes, podemos usar o import de outras classes para sua utilização.
+Correto! O import facilita o uso da classe pois não precisamos do Full Qualified Name.
+
+-- O modificador default do Java restringe acesso a nível de pacote. Logo, se não for definido algum modificador, seja na classe, método, ou atributo, apenas classes do mesmo pacote podem acessar essas informações.
+Correto, com default apenas classes do mesmo pacote podem acessar essas informações.
+
+
+| Modificadores de Acesso/Visibilidade | 
+|--------------------------------------| 
+| public                               | Visivel em todo lugar, dentro e fora do pacote.
+| protected                            | Visível dentro do pacote e publico para os filhos (extends)
+| <<package private>>                  | Visibilidade dada quando nao ha nada na frente do metodo, visivel só para o pacote
+| private                              | Visivel apenas dentro da classe
+
+package br.com.bytebank.banco.modelo; 
+
+public abstract class Conta { 
+
+    protected double saldo;
+    private int agencia;
+    private int numero;
+    private Cliente titular;
+    private static int total = 0;
+//...
