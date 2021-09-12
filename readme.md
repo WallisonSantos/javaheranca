@@ -114,3 +114,41 @@ Classe   Package   Classe Filho   Qq Package
 
 -- <<package private>> (ausência do modificador)
 A ausência do modificador, também chamado de package private ou default, o membro fica visível na classe e no package, mas é invisível fora do pacote (nem para filhos).
+
+# Javadoc
+
+-- Qual comentário devemos usar para declarar um javadoc no código fonte?
+* javadoc aqui
+Correto, importante é usar o char / seguidos por 2 chars **
+
+# Sobre o javadoc
+
+a) É preciso ter instalado o JDK para poder gerar a documentação javadoc.
+b) O javadoc é uma documentação escrita pelo desenvolvedor para desenvolvedores.
+d) Existem tags especias para marcar o autor ou a versão da classe.
+
+### Para saber mais: Todas as tags
+## Já vimos nessa aula algumas tags (ou anotações) do javadoc como @version ou @author. Segue a lista completa:
+
+@author (usado na classe ou interface)
+@version (usado na classe ou interface)
+@param (usado no método e construtor)
+@return (usado apenas no método)
+@exception ou @throws (no método ou construtor)
+@see
+@since
+@serial
+@deprecated
+Importante é que as tags do javadoc existem apenas para padronizar alguns dados fundamentais do seu código fonte como o autor e a versão.
+
+Outras anotações: Nos cursos você também já viu uma anotação fora do javadoc, a anotação @Override. Essa anotação é considerada uma configuração, nesse caso interpretado pelo compilador.
+
+As anotações vão muito além das tags javadoc e são muito mais sofisticadas e poderosas. Elas só entraram na plataforma Java a partir da versão 1.5 enquanto o javadoc está presente desde o nascimento da plataforma Java. O interessante é que as anotações foram inspirados pelas tags do javadoc.
+
+# O que é um JAR?
+# -- Falamos no vídeo que JAR significa nada mais do que Java ARchive.
+# -- Que mais podemos dizer sobre o arquivo JAR? Assinale todas as afirmações corretas:
+
+É o formato padrão do mundo Java para distribuir código compilado. Correto, qualquer biblioteca ou projeto vai usar JAR(s) para distribuir o código.
+
+É um arquivo compactado como ZIP. Correto, é nada mais do que um arquivo ZIP, mas como a extensão .jar
