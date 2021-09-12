@@ -89,3 +89,28 @@ public abstract class Conta {
     private Cliente titular;
     private static int total = 0;
 //...
+
+# Sobre modificadores
+
+-- Sobre os modificadores de acesso do Java é correto afirmar que:
+Temos quatro modificadores: private, protected, default e public. Onde a ordem do MAIS restritivo para o MENOS restritivo é: private, default, protected e public.
+
+# Qual modificador é visível nos seguintes lugares?
+
+Classe   Package   Classe Filho   Qualquer Package
+────────────────────────────────────────────
+ ✔        ✔         ✔             ✘
+────────────────────────────────────────────
+
+-- protected
+-- Correto! O modificador protected funciona igual ao *<<package private>> mas adiciona a visibilidade para os filhos (chamado de "publico para os filhos").
+
+# E agora, qual modificador é visível nos seguintes lugares?
+
+Classe   Package   Classe Filho   Qq Package
+────────────────────────────────────────────
+ ✔        ✔         ✘             ✘
+────────────────────────────────────────────
+
+-- <<package private>> (ausência do modificador)
+A ausência do modificador, também chamado de package private ou default, o membro fica visível na classe e no package, mas é invisível fora do pacote (nem para filhos).
