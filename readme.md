@@ -146,9 +146,16 @@ Outras anotações: Nos cursos você também já viu uma anotação fora do java
 As anotações vão muito além das tags javadoc e são muito mais sofisticadas e poderosas. Elas só entraram na plataforma Java a partir da versão 1.5 enquanto o javadoc está presente desde o nascimento da plataforma Java. O interessante é que as anotações foram inspirados pelas tags do javadoc.
 
 # O que é um JAR?
+
 # -- Falamos no vídeo que JAR significa nada mais do que Java ARchive.
 # -- Que mais podemos dizer sobre o arquivo JAR? Assinale todas as afirmações corretas:
 
 É o formato padrão do mundo Java para distribuir código compilado. Correto, qualquer biblioteca ou projeto vai usar JAR(s) para distribuir o código.
 
 É um arquivo compactado como ZIP. Correto, é nada mais do que um arquivo ZIP, mas como a extensão .jar
+###### MAVEN ######
+
+Apache Maven
+Apache Maven é uma ferramenta de gerenciamento e compreensão de projetos de software. Com base no conceito de modelo de objeto de projeto (POM), o Maven pode gerenciar a construção, o relatório e a documentação de um projeto a partir de uma informação central.
+
+Se você acha que o Maven pode ajudar seu projeto, você pode encontrar mais informações na seção "Sobre o Maven" da navegação. Isso inclui uma descrição detalhada do que é o Maven e uma lista de alguns de seus principais recursos .
