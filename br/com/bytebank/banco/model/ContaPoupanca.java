@@ -18,4 +18,10 @@ public class ContaPoupanca extends Conta {
         .println("Estou Nascendo em ContaPoupanca, método Deposita obtido a partir da Super Class com método abstrato");
     super.saldo = super.saldo + valor;
   }
+
+  @Override
+  public String toString() {
+    return "Conta Poupanca, " + super.toString();
+  }
+
 }
