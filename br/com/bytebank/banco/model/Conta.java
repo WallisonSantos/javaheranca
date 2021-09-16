@@ -102,6 +102,17 @@ public abstract class Conta {
     return Conta.total;
   }
 
+  // ? regra de negocio
+  public boolean isEqual(Conta outra) {
+    if (this.agencia != outra.agencia) {
+      return false;
+    }
+    if (this.numero != outra.numero) {
+      return false;
+    }
+    return true;
+  }
+
   @Override
   public String toString() {
     return "Numero: " + this.numero + ", Agencia: " + this.agencia;
