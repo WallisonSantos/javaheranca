@@ -124,3 +124,6 @@ b) Errado, justamente contrário. A ClassCastException é unchecked pois estende
 ### Array é uma estrutura considerada lenta
 
 - Errado, alias é bem contrário, pensando no desempenho o array é a estrutura que se destaca.
+
+https://cursos.alura.com.br/course/threads-java-1
+https://cursos.alura.com.br/course/threads-java-2

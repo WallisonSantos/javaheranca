@@ -103,11 +103,15 @@ public abstract class Conta {
   }
 
   // ? regra de negocio
-  public boolean isEqual(Conta outra) {
-    if (this.agencia != outra.agencia) {
+  @Override
+  public boolean equals(Object ref) {
+
+    Conta other = (Conta) ref; // Cast para forçar tipagem do parametro,
+
+    if (this.agencia != other.agencia) {
       return false;
     }
-    if (this.numero != outra.numero) {
+    if (this.numero != other.numero) {
       return false;
     }
     return true;
