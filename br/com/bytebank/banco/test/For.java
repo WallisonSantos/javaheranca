@@ -2,7 +2,7 @@ package br.com.bytebank.banco.test;
 
 import br.com.bytebank.banco.model.*;
 
-public class Aula1 {
+public class For {
 
   public static void main(String[] args) throws SaldoException {
 

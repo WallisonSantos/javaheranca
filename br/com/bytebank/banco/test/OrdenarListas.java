@@ -11,50 +11,52 @@ import br.com.bytebank.banco.model.ContaPoupanca;
 public class OrdenarListas {
   public static void main(String[] args) {
 
-    Conta cc1 = new ContaCorrente(22312, 234244);
+    Conta cc1 = new ContaCorrente(66, 55);
     cc1.deposita(100);
 
-    Conta cc2 = new ContaCorrente(22, 11);
+    Conta cc2 = new ContaCorrente(33, 22);
     cc2.deposita(200);
 
-    Conta cc3 = new ContaPoupanca(33, 44);
+    Conta cc3 = new ContaPoupanca(44, 11);
     cc3.deposita(300);
 
-    Conta cc4 = new ContaPoupanca(55, 66);
+    Conta cc4 = new ContaPoupanca(11, 00);
     cc4.deposita(400);
 
-    List<Conta> n = new ArrayList<>();
-    n.add(cc1);
-    n.add(cc2);
-    n.add(cc3);
-    n.add(cc4);
+    List<Conta> listas = new ArrayList<>();
+    listas.add(cc1);
+    listas.add(cc2);
+    listas.add(cc3);
+    listas.add(cc4);
 
-    for (Conta conta : n) {
+    for (Conta conta : listas) {
       System.out.println(conta);
     }
 
-    NumeroDaContaComparador comparador = new NumeroDaContaComparador();
+    NumeroDaConta nConta = new NumeroDaConta();
 
-    n.sort(comparador);
+    listas.sort(nConta);
 
     System.out.println("*****************************************");
 
-    for (Conta conta : n) {
-      System.out.println(conta);
+    for (Conta conta : listas) {
+      System.out.println(conta.toString());
     }
   }
 }
 
-class NumeroDaContaComparador implements Comparator<Conta> {
+class NumeroDaConta implements Comparator<Conta> {
 
   @Override
-  public int compare(Conta c1, Conta c2) {
-    if (c1.getNumero() < c2.getNumero()) {
+  public int compare(Conta a, Conta b) {
+
+    if (a.getNumero() < b.getNumero()) {
       return -1;
     }
-    if (c1.getNumero() > c2.getNumero()) {
+    if (a.getNumero() > b.getNumero()) {
       return 1;
     }
+
     return 0;
   }
 }
