@@ -1,6 +1,7 @@
 package br.com.bytebank.banco.test;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 
@@ -9,7 +10,7 @@ import br.com.bytebank.banco.model.ContaCorrente;
 import br.com.bytebank.banco.model.ContaPoupanca;
 import br.com.bytebank.banco.model.Cliente;
 
-public class OrdenarString {
+public class OrderNatural {
   public static void main(String[] args) {
 
     Conta contaW = new ContaCorrente(111, 222);
@@ -26,18 +27,22 @@ public class OrdenarString {
     contaK.deposita(100);
     System.out.println("********* Cliente: " + clienteK.getNome() + ", Conta: " + contaK + "*********");
 
+    Conta contaC = new ContaPoupanca(112, 223);
+    Cliente clienteC = new Cliente();
+    clienteC.setNome("Kareen");
+    contaC.setTitular(clienteC);
+    contaC.deposita(201);
+    System.out.println("********* Cliente: " + clienteC.getNome() + ", Conta: " + contaC + "*********");
+
     List<Conta> listas = new ArrayList<>();
     listas.add(contaW);
     listas.add(contaK);
+    listas.add(contaC);
 
-    System.out.println(listas);
-
-    TitularComparator titular = new TitularComparator();
-    listas.sort(titular);
+    Collections.sort(listas);
 
     for (Conta conta : listas) {
-      System.out
-          .println("Conta: " + conta.getAgencia() + ", " + conta.getAgencia() + ", " + conta.getTitular().getNome());
+      System.out.println(conta + "," + conta.getTitular().getNome() + conta.getSaldo());
     }
   }
 }

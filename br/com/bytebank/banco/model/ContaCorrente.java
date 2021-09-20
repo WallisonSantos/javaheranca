@@ -7,7 +7,6 @@ public class ContaCorrente extends Conta implements Tributavel {
   // ? partir do Super, que deverá ser escrito exatamente igual ao da classe mãe
   public ContaCorrente(int agencia, int numero) {
     super(agencia, numero);
-    System.out.println("Estou Nascendo em ContaCorrente, método Construtor obtido a partir da Super Class:");
   }
 
   @Override
@@ -19,8 +18,6 @@ public class ContaCorrente extends Conta implements Tributavel {
   // Conta.deposita(double)Java(67109264)
   @Override
   public void deposita(double valor) {
-    System.out
-        .println("Estou Nascendo em ContaCorrente, método Deposita obtido a partir da Super Class com método abstrato");
     super.saldo = super.saldo + valor;
   }
 
@@ -29,8 +26,6 @@ public class ContaCorrente extends Conta implements Tributavel {
   // original foi alterado.
   @Override
   public void saca(double valor) throws SaldoException {
-    System.out
-        .println("Estou Nascendo em ContaCorrente, método Saca obtido a partir da Super Class com método abstrato");
     double valorSacar = valor + 0.2;
     super.saca(valorSacar);
   }
